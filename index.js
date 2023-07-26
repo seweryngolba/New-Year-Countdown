@@ -1,6 +1,7 @@
-const appYear = document.querySelector("#countdown-year");
 const happyNewYear = document.querySelector("#new-year-display");
-const newYearDate = new Date("Jan 1, 2024 00:00:00").getTime();
+const newYearDate = new Date("Jan 1, 2024 00:00:00");
+const countDown = document.querySelector("#countdown");
+const container = document.querySelector("#container");
 
 function newYearCountdown() {
   const now = new Date().getTime();
@@ -20,6 +21,12 @@ function newYearCountdown() {
   document.getElementById("hours").textContent = h < 10 ? "0" + h : h;
   document.getElementById("minutes").textContent = m < 10 ? "0" + m : m;
   document.getElementById("seconds").textContent = s < 10 ? "0" + s : s;
+
+  if (dateDifference <= 0) {
+    countDown.style.display = "none";
+    happyNewYear.style.display = "block";
+    container.classList.add("fireworks");
+  }
 }
 
 newYearCountdown();
