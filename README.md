@@ -11,3 +11,5 @@ The project uses the following technologies:
 - JavaScript: For implementing the countdown functionality and handling animations.
 
 ## Demo
+
+You can try out the live version of the New Year Countdown by visiting the [demo page](https://new-year-countdown-s-golba.netlify.app/).
